@@ -47,11 +47,11 @@ Not defined yet
 
 handling a crud for users, tasks and roles
 
-- [ ] set up an architecture
+- [x] set up an architecture
 - [ ] set up a light DB
 - [ ] use an ORM
 - [ ] set up some tests (TDD like)
-- [ ] create routes
+- [x] create routes
 - [ ] create swagger (/ use OpenAPI)
 - [ ] set up CORS policy for the routes
 
