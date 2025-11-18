@@ -16,7 +16,25 @@ describe('AppController (e2e)', () => {
 		await app.init();
 	});
 
-	it('/ (GET)', () => {
-		return request(app.getHttpServer()).get('/').expect(200).expect('Hello World!');
+	afterEach(async () => {
+		await app.close();
+	});
+
+	describe('redirections', () => {
+		it('should redirect to the GitHub repository', () => {
+			return request(app.getHttpServer())
+				.get('/github-repository') // try my redirection path
+				.expect(302)
+				.expect('Location', 'https://github.com/bouvb/NestJS-API');
+		});
+	});
+
+	describe('others', () => {
+		it('should show "Hello World !"', () => {
+			return request(app.getHttpServer())
+				.get('/') // try home page
+				.expect(200)
+				.expect('Hello World!');
+		});
 	});
 });
