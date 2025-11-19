@@ -50,10 +50,18 @@ handling a crud for users, tasks and roles
 - [x] set up an architecture
 - [ ] set up a light DB
 - [ ] use an ORM
-- [ ] set up some tests (TDD like)
 - [x] create routes
 - [ ] create swagger (/ use OpenAPI)
 - [ ] set up CORS policy for the routes
+
+### set up some tests (TDD like)
+
+- [x] set up some service unit tests (for users)
+- [ ] set up some controller unit tests
+- [ ] set up some pipes, guards, helpers and filters unit tests
+- [ ] set up some db repository unit tests
+- [ ] set up some integration tests
+- [ ] set up some e2e tests
 
 ### Bonus
 

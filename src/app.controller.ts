@@ -1,4 +1,4 @@
-import { Controller, Get, Redirect, Req } from '@nestjs/common';
+import { Controller, Get, HttpStatus, Redirect, Req, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
 import type { Request } from 'express';
 
@@ -12,6 +12,6 @@ export class AppController {
 	}
 
 	@Get('github-repository')
-	@Redirect('https://github.com/bouvb/NestJS-API', 302)
+	@Redirect('https://github.com/bouvb/NestJS-API', HttpStatus.FOUND)
 	getGitHubRepository() {}
 }
